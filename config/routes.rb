@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'options/index'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   root 'main#index'
   resources :users, only: [:new,:create]
   resources :contacts

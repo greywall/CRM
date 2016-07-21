@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20160720180100) do
   add_index "contacts", ["user_id"], name: "index_contacts_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "firstname"
-    t.string   "lastname"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
