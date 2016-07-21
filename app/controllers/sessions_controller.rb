@@ -8,9 +8,10 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      render :create
+      render contacts_path
     else
-      redirect_to new_user_path
+      render :new
+      # redirect_to contacts_path
     end
   end
 

@@ -6,6 +6,7 @@ class CreateContacts < ActiveRecord::Migration
     	t.string :email
     	t.string :phone_number
     	t.string :company
+      t.string :notes
     	t.references :user, index: true
       t.timestamps null: false
     end

@@ -1,33 +1,39 @@
-<h1>New Contact</h1>
-<%= form_for @contact do |f| %>
-  <% if @contact.errors.any? %>
-    <div>
-      <%= pluralize(@contact.errors.count, "error") %> prevented the account from being created:
-      <ul>
-        <% @contact.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+<div class="blue_box_4">
+  <h1>Create New Contact</h1>
+  <%= form_for @contact do |f| %>
+    <% if @contact.errors.any? %>
+      <div>
+        <%= pluralize(@contact.errors.count, "error") %> prevented the account from being created:
+        <ul>
+          <% @contact.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form">
+      <div>
+        <%= f.label :first_name, "First Name" %><br>
+        <%= f.text_field :first_name %>
+      </div>
+      <div>
+        <%= f.label :last_name, "Last Name" %><br>
+        <%= f.text_field :last_name %>
+      </div>
+       <div>
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+       <div>
+        <%= f.label :phone_number %><br>
+        <%= f.text_field :phone_number %>
+      </div>
+      <div>
+        <%= f.label :company %><br>
+        <%= f.text_field :company %>
+      </div>
+      
     </div>
+    <div class="button"><%= f.submit "Create Contact" %></div>
   <% end %>
-  <div class="form">
-    <div>
-      <%= f.label :email %><br>
-      <%= f.text_field :email %>
-    </div>
-    <div>
-      <%= f.label :first_name, "First Name" %><br>
-      <%= f.text_field :first_name %>
-    </div>
-    <div>
-      <%= f.label :last_name, "Last Name" %><br>
-      <%= f.text_field :last_name %>
-    </div>
-    <div>
-      <%= f.label :company %><br>
-      <%= f.text_field :company %>
-    </div>
-    
-  </div>
-  <div class="button"><%= f.submit "Create Contact" %></div>
-<% end %>
+</div>

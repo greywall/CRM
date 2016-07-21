@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+
+html,body {
+	text-align: center;
+	font-family: sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.options_1{
+	padding-top:45px;
+	font-size: 25px;
+}
+
+.center {
+	background-color: rgba(159, 222, 251);
+	padding-top:5px;
+}
+
+.landing_box {
+	height:150px;
+	width:400px; 
+	background-color: rgba(3, 169, 244, 0.38);
+	border-radius: 15px;
+	position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.blue_box_3{
+	height:150px;
+	width:400px; 
+	background-color: rgba(3, 169, 244, 0.38);
+	border-radius: 15px;
+	position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.blue_box{
+	height:200px;
+	width:400px; 
+	background-color: rgba(3, 169, 244, 0.38);
+	border-radius: 15px;
+	position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.blue_box_2{
+	height:350px;
+	width:350px; 
+	background-color: rgba(3, 169, 244, 0.38);
+	border-radius: 15px;
+	position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.blue_box_4{
+	height:350px;
+	width:350px; 
+	background-color: rgba(3, 169, 244, 0.38);
+	border-radius: 15px;
+	position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+button {
+}
