@@ -1,16 +1,28 @@
 Rails.application.routes.draw do
   
-  get 'options/index'
+  get 'appointments/index'
 
-  get 'sessions/new'
+  get 'appointments/show'
 
-  get 'sessions/create'
+  get 'appointments/new'
 
-  get 'sessions/destroy'
+  get 'appointments/edit'
 
+  get 'calls/index'
+
+  get 'calls/show'
+
+  get 'calls/new'
+
+  get 'calls/edit'
+
+  resources :options, only: :index
+  resources :sessions, only: [:create, :destroy, :new]
   root 'main#index'
   resources :users, only: [:new,:create]
   resources :contacts
+  resources :calls 
+  resources :appointments
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
+    redirect_to contact_path(contact)
   end
 
   def new
