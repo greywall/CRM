@@ -1,2 +1,19 @@
-<h1>Calls#edit</h1>
-<p>Find me in app/views/calls/edit.html.erb</p>
+  <h1>Edit Call</h1>
+  <%= form_for @call do |f| %>
+    <div class="form">
+      <div>
+        <%= f.label :date, "Date" %><br>
+        <%= f.date_field :date %>
+      </div>
+      <div>
+        <%= f.label :time, "Time" %><br>
+        <%= f.time_field :time %>
+      </div>
+       <div>
+        <%= f.label :notes %><br>
+        <%= f.text_field :notes %>
+      </div>
+    </div>
+    <div><%= f.submit "Submit" %></div>
+  <% end %>
+  <%= link_to "Back to Call", call_path(@call) %>

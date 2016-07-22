@@ -1,2 +1,12 @@
-<h1>Calls#show</h1>
-<p>Find me in app/views/calls/show.html.erb</p>
+<div class="blue_box_4">
+<h1>call Info</h1>
+
+<h3>Date:  <%= @call.date %> </h3>
+<h3>Time:  <%= @call.time %></h3>
+<h3>Notes:  <%= @call.notes %></h3>
+</br>
+
+<%= link_to "Call History", calls_path %><br/>
+<%= link_to "Book Appointment", new_appointment_path %><br/>
+<%= link_to "Back to calls", calls_path %>
+</div>

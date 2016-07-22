@@ -33,7 +33,7 @@ class CallsController < ApplicationController
   		@call.save
   		redirect_to call_path(@call)
   	else
-  		render
+  		render :edit
   	end
   end
 

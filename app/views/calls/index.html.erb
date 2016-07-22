@@ -3,10 +3,9 @@
 <% @calls.each do |call| %>
 <table class="table">
   <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Date</th>
+    <th>Time</th>
     <th>Notes</th>
-    <th>View</th>
     <th>Update</th>
     <th>Delete</th>
   </tr>
@@ -14,7 +13,6 @@
     <td><%= call.date %></td>
     <td><%= call.time %></td>
     <td><%= call.notes %></td>
-    <td><%= link_to "View", call_path(call) %></td>
     <td><%= link_to "Update", edit_call_path(call) %></td>
     <td><%= link_to "Delete", call, method: :delete, data: { confirm: "Are you sure?" } %></td>
   </tr>
