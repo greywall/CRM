@@ -4,10 +4,10 @@ ruby 2.3.0p0 (2015-12-25 revision 53290)
 
 Getting Started
 
-bundle install
+1. bundle install
 
-rake db:migrate
+2. rake db:migrate
 
-rails server
+3. rails server
 
-Go to localhost:3000/
+4. Go to localhost:3000/
