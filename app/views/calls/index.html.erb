@@ -1,2 +1,24 @@
-<h1>Calls#index</h1>
-<p>Find me in app/views/calls/index.html.erb</p>
+<h1>Call History</h1>
+ 
+<% @calls.each do |call| %>
+<table class="table">
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Notes</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+    <td><%= call.date %></td>
+    <td><%= call.time %></td>
+    <td><%= call.notes %></td>
+    <td><%= link_to "Update", edit_call_path(call) %></td>
+    <td><%= link_to "Delete", call, method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+</table>
+<% end %>
+</br>
+<%= link_to "Create New call", new_call_path %>
+</br>
+<%= link_to "Back to Contact", contacts_path %>

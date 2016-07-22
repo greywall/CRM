@@ -1,20 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'appointments/index'
-
-  get 'appointments/show'
-
-  get 'appointments/new'
-
-  get 'appointments/edit'
-
-  get 'calls/index'
-
-  get 'calls/show'
-
-  get 'calls/new'
-
-  get 'calls/edit'
 
   resources :options, only: :index
   resources :sessions, only: [:create, :destroy, :new]

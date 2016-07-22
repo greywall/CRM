@@ -1,20 +1,12 @@
-<h1>Contacts</h1>
+<div class="blue_box_4">
+<h1>Contact Info</h1>
 
-<%= @contacts.each do |contact| %>
-	<table class=table>
-		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Email</th>
-			<th>Phone Number</th>
-			<th>Company</th>
-		</tr>
-		<tr>
-			<td><%= contact.first_name %></td>
-	    <td><%= contact.last_name %></td>
-	    <td><%= contact.email %></td>
-	    <td><%= contact.phone_number %></td>
-	    <td><%= contact.company %></td>
-	  </tr>
-	</table>
-<% end %>
+<h3>Name:  <%= @contact.first_name %> <%= @contact.last_name %></h3>
+<h3>Email:  <%= @contact.email %></h3>
+<h3>Phone Number:  <%= @contact.phone_number %></h3>
+</br>
+
+<%= link_to "Call History", calls_path %><br/>
+<%= link_to "Book Appointment", new_appointment_path %><br/>
+<%= link_to "Back to Contacts", contacts_path %>
+</div>
