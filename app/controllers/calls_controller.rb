@@ -1,4 +1,5 @@
 class CallsController < ApplicationController
+  
   def index
   	@calls = Call.all
   end
@@ -16,18 +17,21 @@ class CallsController < ApplicationController
   end
 
   def create 
+    contact = Contact.find_by(params[:id])
   	@call = Call.new(call_params)
   	if @call.save
+      @call[:contact_id] =contact.id 
       redirect_to calls_path
   	else
-  		render :new 
+  		render :new
+    end
   end
 
   def update
   	@call = Call.find(params[:id])
   	if @call.update_attributes(call_params)
   		@call.save
-  		redirect_to
+  		redirect_to call_path(@call)
   	else
   		render
   	end

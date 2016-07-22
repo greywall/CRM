@@ -1,28 +1,29 @@
-<%= link_to "Back to this contact", contact_path(@contact) %>
-
-<h2>Edit this contact.</h2>
-<%= form_for @contact do |f| %>
-	<div>
-	  <%= f.label :first_name %><br>
-	  <%= f.text_field :first_name %>
-	</div>
-	<div>
-	  <%= f.label :last_name %><br>
-	  <%= f.text_field :last_name %>
-	</div>
-	<div>
-	  <%= f.label :email %><br>
-	  <%= f.text_field :email %>
-	</div>
-	<div>
-	  <%= f.label :phone_number %><br>
-	  <%= f.text_field :phone_number %>
-	</div>
-	<div>
-	  <%= f.label :company %><br>
-	  <%= f.text_field :company %>
-	</div>
-	<div>
-	  <%= f.submit "Submit" %> 
-	</div>
-<% end %>
+<div class="blue_box_4">
+	<h2>Edit Contact</h2>
+	<%= form_for @contact do |f| %>
+		<div>
+		  <%= f.label :first_name %><br>
+		  <%= f.text_field :first_name %>
+		</div>
+		<div>
+		  <%= f.label :last_name %><br>
+		  <%= f.text_field :last_name %>
+		</div>
+		<div>
+		  <%= f.label :email %><br>
+		  <%= f.text_field :email %>
+		</div>
+		<div>
+		  <%= f.label :phone_number %><br>
+		  <%= f.text_field :phone_number %>
+		</div>
+		<div>
+		  <%= f.label :company %><br>
+		  <%= f.text_field :company %>
+		</div>
+		<div>
+		  <%= f.submit "Submit" %> 
+		</div>
+	<% end %>
+	<%= link_to "Back to Contact", contact_path(@contact) %>
+</div>

@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+  
   def index
   	@appointments = Appointment.all
   end
@@ -18,9 +19,10 @@ class AppointmentsController < ApplicationController
   def create 
   	@appointment = Appointment.new(appointment_params)
   	if @appointment.save
-  	redirect_to
+      redirect_to contact_path(@contact)
   	else
   		render :new 
+    end
   end
 
   def update

@@ -1,2 +1,11 @@
-<h1>Appointments#new</h1>
-<p>Find me in app/views/appointments/new.html.erb</p>
+<h1>Book New Appointment</h1>
+  <%= form_for @appointments do |f| %>
+    <div class="form">
+    
+       <div>
+        <%= f.label :notes %><br>
+        <%= f.text_field :notes %>
+      </div>
+    </div>
+    <div class="button"><%= f.submit "Book Appointment" %></div>
+  <% end %>

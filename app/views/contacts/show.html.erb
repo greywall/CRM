@@ -1,7 +1,12 @@
+<div class="blue_box_4">
 <h1>Contact Info</h1>
 
-<h2><%= @contact.first_name %></h2> <h2><%= @contact.last_name %></h2>
-<h3><%= @contact.email %></h3>
-<h4><%= @contact.phone_number %></h4>
+<h3>Name:  <%= @contact.first_name %> <%= @contact.last_name %></h3>
+<h3>Email:  <%= @contact.email %></h3>
+<h3>Phone Number:  <%= @contact.phone_number %></h3>
+</br>
 
-<%= link_to "Back to Contacts", contacts_path %><br/>
+<%= link_to "Call History", calls_path %><br/>
+<%= link_to "Book Appointment", new_appointment_path %><br/>
+<%= link_to "Back to Contacts", contacts_path %>
+</div>
